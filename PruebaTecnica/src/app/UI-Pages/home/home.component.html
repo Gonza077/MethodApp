@@ -1,1 +1,42 @@
-<p>home works!</p>
+<div class="container-fluid body">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm.value)"> 
+    <div class="container-fluid text-center p-2">
+      <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput formControlName="inputSearch">
+      </mat-form-field>
+    </div>
+  </form>
+
+  <div class="d-flex flex-wrap justify-content-center">
+    <form action=""></form>
+      @for (movie of filmsTemp; track $index) {
+        <app-card 
+          [movie] =  movie >
+        </app-card>
+        <!-- <mat-card class="example-card"  routerLink="movie/{{movie.imdbID}}">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image: url({{movie.Poster}});">
+            </div>
+            <mat-card-title> {{ movie.Title }} </mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+          </mat-card-header>
+          <img 
+              mat-card-image 
+              src="{{movie.Poster}}" 
+              alt="Photo of Movie">
+      </mat-card> -->
+      }
+  </div>
+  <div class="d-flex flex-wrap justify-content-end p-2">
+    <mat-paginator
+      [length]="this.totalFilms"
+      [pageSizeOptions]="[10]"
+      aria-label="Select page"
+      (page)="handlePageEvent($event)">
+    </mat-paginator>
+  </div>
+
+
+
+</div>

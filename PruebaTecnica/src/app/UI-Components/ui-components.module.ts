@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
 
 //---------------------------Angular material---------------------------//
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -38,6 +37,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { RouterModule } from '@angular/router';
 //---------------------------Angular material---------------------------//
 
 const materialModules = [
@@ -82,6 +82,7 @@ const materialModules = [
   declarations: [
   ],
   imports: [
+    RouterModule,
     CommonModule,
     ...materialModules,
   ],

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './UI-Components/footer/footer.component';
 import { UIComponentsModule } from './UI-Components/ui-components.module';
 import { NavbarComponent } from './UI-Components/navbar/navbar.component';
@@ -17,7 +17,8 @@ import { UIPagesModule } from './UI-Pages/ui-pages.module';
     FooterComponent,
     NavbarComponent,
     UIComponentsModule,
-    UIPagesModule
+    UIPagesModule,
+    RouterModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
