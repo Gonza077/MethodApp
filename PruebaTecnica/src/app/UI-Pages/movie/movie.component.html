@@ -1,1 +1,40 @@
-<p>movie works!</p>
+<div class="container-fluid body">
+    <div class="d-flex p-5">
+        <div class="row p-2">
+            <img 
+            mat-card-image 
+            src="{{movie.Poster}}" 
+            alt="Photo of Movie">
+        </div>
+        <div class="pl-5 text-light">
+            <div class="cabecera">
+                <h1>    
+                    Titulo : {{movie.Title}}
+                </h1> 
+                <h1>    
+                    Director : {{movie.Director}}
+                </h1> 
+                <h3>    
+                    Lanzamiento : {{movie.Released}}
+                </h3>  
+                <h3>
+                    Reparto : {{movie.Actors}}
+                </h3>
+            </div>
+            <div class="cuerpo">
+                <p> {{movie.Plot}} </p>
+                <p> Genero : {{movie.Genre}}</p>
+                <p> Rating : {{movie.imdbRating}}</p>
+                <p> Nominaciones : {{movie.Awards}}</p>
+                <p> Idiomas : {{movie.Language}}</p>
+                <p> Duracion : {{movie.Runtime}}</p>
+                <p> Escritores : {{movie.Writer}}</p>
+            </div>
+        </div>      
+    </div>
+    <div class="pb-3 text-center">
+        <button style="margin: 8px 8px 8px 0;" mat-flat-button color="primary" (click)="like()">LIKE!</button>
+        <button style="margin: 8px 8px 8px 0;" mat-flat-button color="warn" (click)="dislike()">DISLIKE!</button>
+    </div>
+
+</div>

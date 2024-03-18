@@ -57,6 +57,5 @@ export class HomeComponent implements OnInit {
 
   handlePageEvent(e: PageEvent) {
     this.getFilms(this.profileForm.value.inputSearch, e.pageIndex+1); 
-    // this.filmsTemp = this.cursos.slice(e.pageIndex * e.pageSize, (e.pageIndex + 1) * e.pageSize);
   }
 }
